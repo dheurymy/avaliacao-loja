@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Quicksand:wght@300..700&family=Whisper&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Quicksand:wght@300..700&family=Varela+Round&family=Whisper&display=swap');
+
+:root {
+   --cor-fundo--tela: rgb(250, 235, 215);
+
+   --cor-fundo-bom: rgb(117, 197, 117); 
+   --cor-borda-bom: rgb(20, 117, 77);
+   
+   --cor-fundo-regular: rgb(250, 252, 128); 
+   --cor-borda-regular: rgb(255, 238, 0);
+
+   --cor-fundo-ruim: rgb(243, 134, 127); 
+   --cor-borda-ruim: rgb(255, 45, 45);
+
+   --cor-preto: #221c1c;
+}
+
+body {
+   width: 100%;
+   height: 100vh;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   font-family: "Varela Round", sans-serif;
+
+   background-color: var(--cor-fundo--tela);
+}
+
+main {
+   width: 320px; 
+   height: 95vh;
+
+  
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   border-radius: 25px;
+}
+
+.fundo-bom {
+   background-color: rgb(117, 197, 117);
+
+   border: 1px solid var(--cor-borda-bom);
+   box-shadow: 3px 3px 15px  var(--cor-borda-bom);
+}
+
+.fundo-regular {
+   background-color: var(--cor-fundo-regular);
+
+   border: 1px solid var(--cor-borda-regular);
+   box-shadow: 3px 3px 15px  var(--cor-borda-regular);
+}
+
+.fundo-ruim {
+   background-color: var(--cor-fundo-ruim);
+
+   border: 1px solid var(--cor-borda-ruim);
+   box-shadow: 3px 3px 15px  var(--cor-borda-ruim);
+}
+
+/* Área de texto superior */
+
+.titulo{
+   margin-bottom: 1rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 310px;
+}
+
+.texto-titulo {
+   width: 100%;
+   font-weight: 520;
+   font-size: 1em;
+   text-align: center;
+}
+
+.texto-titulo > strong {
+   font-size: 0.6em;
+   font-weight: 550;
+}
+
+/* Área do rosto */
+
+.rosto {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 300px;
+   height: 300px;
+
+   
+}
+
+.olhos {
+   width: 100%;
+   height: auto;
+
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+
+   gap: 20px;
+}
+
+/* Área do rosto na posicao boa*/
+
+.olho-bom {
+   width: 130px;
+   height: 140px;
+
+   border: 1px solid var(--cor-preto);
+   border-radius: 50%;
+
+   background-color: var(--cor-preto);
+}
+
+.boca-bom {
+   width: 75px;
+   height: 40px;
+
+   border: 1px solid var(--cor-preto);
+   border-radius: 10px;
+   border-end-start-radius: 150px;
+   border-end-end-radius: 150px;
+   
+
+   background-color: var(--cor-preto);
+}
+
+/* Área do rosto na posicao regular */
+
+.olho-regular {
+   width: 100px;
+   height: 50px;
+
+   border: 1px solid var(--cor-preto);
+   border-radius: 25px;
+
+   background-color: var(--cor-preto);
+}
+
+.boca-regular {
+   margin-top: 1em;
+   width: 100px;
+   height: 40px;
+
+   border: 1px solid var(--cor-preto);
+   border-radius: 25px;
+   
+   
+
+   background-color: var(--cor-preto);
+}
+
+/* Área do rosto na posicao ruim */
+
+.olho-ruim {
+   width: 50px;
+   height: 50px;
+
+   border: 1px solid var(--cor-preto);
+   border-radius: 50px;
+
+   background-color: var(--cor-preto);
+}
+
+.boca-ruim {
+   margin-top: 1em;
+   width: 200px;
+   height: 120px;
+
+   border: 1px solid var(--cor-preto);
+   border-radius: 25px;
+   
+   border-start-end-radius: 150px;
+   border-start-start-radius: 150px;
+   
+
+   background-color: var(--cor-preto);
+}
+
+
+
+
+/* Área do slider */
+
+.slider-container {
+   width: 300px;
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   
+   margin-bottom: 3rem;
+   cursor: pointer;
+ }
+
+ .slider-container > label{
+   width: 300px;
+   font-size: medium;
+   text-align: center;
+
+   margin-bottom: 0.5em;
+   
+ }
+ 
+ input[type="range"] {
+   width: 220px;
+   -webkit-appearance: none; /* Remove o estilo padrão do navegador */
+   appearance: none;
+   height: 5px;
+   background: #5b5c5c;
+   border-radius: 5px;
+   outline: none;
+   cursor: pointer;
+ }
+ 
+ /* Estilo do "thumb" (a bolinha que desliza) */
+ input[type="range"]::-webkit-slider-thumb {
+   -webkit-appearance: none;
+   appearance: none;
+   width: 20px;
+   height: 20px;
+   background: #000000;
+   border-radius: 50%;
+   cursor: pointer;
+ }
+ 
+ input[type="range"]::-moz-range-thumb {
+   width: 20px;
+   height: 20px;
+   background: #000500;
+   border-radius: 50%;
+   cursor: pointer;
+ }
+ 
+ .slider-labels {
+   display: flex;
+   flex-direction: row;
+   gap: 60px;
+   justify-content: space-between;
+   margin-top: 10px;
+ }
+ 
+ .slider-labels span {
+   font-size: small;
+   font-weight: 500;
+ }
+ 
+
+/* Área de comentário */
+
+.comentario {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+
+   width: 310px;
+   height: auto;
+
+   margin-bottom: 1.5rem;
+}
+
+.comentario > input {
+   width: 280px;
+   height: 100px;
+
+   border: 1px solid rgb(4, 114, 31);
+   border-radius: 10px 10px 0px 10px;
+
+   background-color: var(--cor-fundo--tela);
+}
+
+
+.comentario > input::placeholder {
+   font-family: "Varela Round", sans-serif;
+   font-size: 1em;
+}
+
+
+/* Área do botao */
+
+.area-botao {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+
+.botao {
+   width: 150px;
+   height: 50px;
+
+   
+   border-radius: 25px;
+
+   cursor: pointer;
+   
+   font-family: "Varela Round", sans-serif;
+   font-size: 1.5rem;
+   font-weight: 600;
+}
+
+.botao-bom {
+   border: 1px solid var(--cor-borda-bom);
+   background-color: var(--cor-borda-bom);
+}
+
+.botao-regular {
+   border: 1px solid var(--cor-borda-regular);
+   background-color: var(--cor-borda-regular);
+}
+
+.botao-ruim {
+   border: 1px solid var(--cor-borda-ruim);
+   background-color: var(--cor-borda-ruim);
+}
